@@ -90,6 +90,7 @@ export default {
   lightGrey: '#8E8E93',
   darkGrey: '#616161',
   organge: '#FF5055',
+  grey: '#dddedd',
 
   darkOrange: 'rgba(255, 132, 11, 1)',
   darkYellow: 'rgba(255, 164, 31, 1)',

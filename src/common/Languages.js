@@ -4,89 +4,42 @@ export default new LocalizedStrings({
   en: {
     Exit: 'Exit',
     ExitConfirm: 'Are you sure you want to exit this app',
+    ThankYou: 'Thank you',
     YES: 'YES',
     NO: 'NO',
     OK: 'OK',
-    ViewMyOrders: 'View My Oders',
     CANCEL: 'CANCEL',
     Confirm: 'Confirm',
     Later: 'Later',
     Update: 'Update',
+    Sure: 'Sure',
+    Done: 'Done',
     Input: 'Input',
     NEW: 'NEW',
-    DelayDeliveryTime: 'Delay delivery time',
-    Review: 'Đánh giá',
+    Review: 'Review',
+    UpdateApp: 'Update App',
+    Close: 'Close',
+    ClearSearch: 'Clear Search',
+    noConnection: 'NO INTERNET ACCESS',
+    Loading: 'LOADING...',
 
     // Sceen's Titles
     Home: 'Trang chủ',
     Intro: 'Intro',
-    Product: 'Product',
-    Cart: 'Cart',
     Notifications: 'Thông báo',
-    NoMessage: `There's no messages`,
-    WishList: 'WishList',
     Account: 'Account',
 
-    '1kPromotion': 'Buy 1K Products',
-    posBasedPromotion: 'Launching POS Deals',
+    NoMessage: `There's no messages`,
+    seeMore: 'See More',
+    seeLess: 'See Less',
+    seeAll: 'Show All',
     hotDeal: 'Hot Deal',
-    bestSelling: 'Best Selling',
-    Recents: 'Recents',
 
-    // Product
-    AddtoCart: 'Add to Cart',
-    AddtoWishlist: 'Add to Wishlist',
-    AdditionalInformation: 'Description',
-    BUYNOW: 'BUY NOW',
+    // Travel
     ErrorMessageRequest: "Can't get data from server",
     NoConnection: 'No internet connection',
-    ProductRelated: 'You May Also Like',
 
-    // Cart
-    NoCartItem: 'There is no product in cart',
-    Total: 'Total',
-    EmptyCheckout: "Sorry, you can't check out an empty cart",
-    RemoveCartItemConfirm: 'Remove this product from cart?',
-    MyCart: 'Cart',
-    Order: 'Order',
-    ShoppingCart: 'Shopping Cart',
-    ShoppingCartIsEmpty: 'Your Cart is Empty',
-    Delivery: 'Delivery',
-    AddProductToCart: 'Add a product to the shopping cart',
-    ShopNow: 'Shop Now',
-    YourSale: 'Your Sale:',
-    BuyNow: 'Buy Now',
-    Items: 'items',
-    Item: 'item',
-    ThankYou: 'Thank you',
-    NextStep: 'Next Step',
-
-    // Wishlist
-    NoWishListItem: 'There is no item in wishlist',
-    MoveAllToCart: 'Add all to cart',
-    EmptyWishList: 'Empty wishlist',
-    EmptyAddToCart: 'Sorry, the wishlist is empty',
-    RemoveWishListItemConfirm: 'Remove this product from wishlist?',
-    CleanAll: 'Clean All',
-
-    Category: 'Category',
-
-    // Checkout
-    Checkout: 'Checkout',
     Back: 'Back',
-    BackToHome: 'Back to Home',
-    ContinueShopping: 'Continue Shopping',
-    OrderCompleted: 'Your order was completed',
-    OrderCanceled: 'Your order was canceled',
-    OrderFailed: 'Something went wrong...',
-
-    // myorder
-    MyOrder: 'My Orders',
-    NoOrder: "You don't have any orders",
-    OrderDate: 'Order Date',
-    OrderStatus: 'Status',
-    OrderTotal: 'Total',
-    OrderDetails: 'Show detail',
 
     // form
     NotSelected: 'Not selected',
@@ -102,26 +55,23 @@ export default new LocalizedStrings({
 
     // search
     Search: 'Tìm kiếm',
-    SearchPlaceHolder: 'Search product by name',
-    NoResultError: 'Your search keyword did not match any products.',
+    Filters: 'Filters',
+    NoResultError: 'Your search keyword did not match any travels.',
+    Filter: 'Filter',
+    Select: 'Select',
+    Cancel: 'Cancel',
+    ClearFilter: 'Clear Filter',
+    Result: 'Result',
+    SelectDate: 'Select Date',
+    AllDate: 'All Date',
 
     // filter panel
-    Categories: 'Thể loại',
-
-    // filter panel
-    Loading: 'LOADING...',
     welcomeBack: 'Welcome back! ',
-    seeAll: 'Show All',
-
-    OutOfStock: 'Out of Stock',
-    GiftProduct: 'Gift Product',
 
     // Place holder
     TypeNotSelectedError: 'Please choose one',
     TypeEmail: 'phamhieu@gmail.com',
     TypeShippingAddress: 'Shipping address',
-    close: 'CLOSE',
-    noConnection: 'NO INTERNET ACCESS',
 
     // user profile screen
     AccountInformations: 'Account Informations',
@@ -131,29 +81,25 @@ export default new LocalizedStrings({
     LoggedOut: 'You have logged out',
 
     // Modal
-    Select: 'Select',
-    Cancel: 'Cancel',
     Guest: 'Guest',
 
     Discount: 'Discount',
-    Filters: 'Filters',
-    Pricing: 'Pricing',
-    Filter: 'Filter',
-    ClearFilter: 'Clear Filter',
-    ProductCatalog: 'Product Catalog',
   },
   vi: {
     // Common phrases
     Exit: 'Thoát',
     ExitConfirm: 'Bạn có chắc muốn thoát ra?',
-    Yes: 'Có',
-    No: 'Không',
+    YES: 'Có',
+    NO: 'Không',
     OK: 'OK',
-    Cancel: 'Bỏ qua',
+    CANCEL: 'Bỏ qua',
     Update: 'Sửa',
     Sure: 'Chắc chắn',
     Done: 'Xong',
     ThankYou: 'Cảm ơn',
+    Input: 'Nhập',
+    NEW: 'MỚI',
+    Review: 'Đánh giá',
     Back: 'Quay lại',
     UpdateApp: 'Cập nhật app',
     Later: 'Để sau',
@@ -165,24 +111,24 @@ export default new LocalizedStrings({
 
     // Sceen's Titles
     Home: 'Trang chủ',
+    Intro: 'Intro',
     Notifications: 'Thông báo',
     Account: 'Tài khoản',
 
+    NoMessage: 'Không có thông báo',
     seeMore: 'Xem thêm',
     seeLess: 'Thu gọn',
+    seeAll: 'Tất cả',
+    hotDeal: 'Ưu đãi',
+    Discount: 'Giảm giá',
 
     // filter panel
-    Loading: 'Đang xử lý...',
     welcomeBack: 'Chào mừng bạn! ',
-    seeAll: 'Tất cả',
 
     // search
     Search: 'Tìm kiếm',
     Filters: 'Lọc kết quả',
-    SearchPlaceHolder: 'Tên sách',
     NoResultError: 'Không tìm thấy.',
-    ProductCatalog: 'Thể loại',
-    Pricing: 'Giá tiền',
     Filter: 'Chọn',
     Select: 'Chọn',
     Cancel: 'Quay lại',
@@ -228,9 +174,7 @@ export default new LocalizedStrings({
     YourUsername: 'Hãy nhập tên đăng nhập',
     YourPassword: 'Hãy nhập mật khẩu',
     YourConfirmPassword: 'Hãy nhập lại mật khẩu',
-    // WrongInput: '',
     UsernameOrPasswordIsNotEmpty: 'Tên đăng nhập hoặc mật khẩu không được để trống',
-    // InvalidUser: '',
     UsernameOrPasswordIsIncorrect: 'Tên đăng nhập hoặc mật khẩu không chính xác',
     ConfirmPassword: 'Nhập lại mật khẩu',
     PasswordNotMatch: 'Mật khẩu không khớp',
@@ -238,10 +182,6 @@ export default new LocalizedStrings({
     PasswordMustBeMoreThanCharacters: 'Mật khẩu phải có trên 8 kí tự',
     CreateAccountSuccess : 'Tạo mới tài khoản thành công',
     CreateAccountFailure : 'Tạo mới tài khoản lỗi',
-
-    // mymessage
-    NoMessage: 'Không có thông báo',
-    TypePhone: 'Số điện thoại',
 
     // form
     NotSelected: 'Chưa chọn',

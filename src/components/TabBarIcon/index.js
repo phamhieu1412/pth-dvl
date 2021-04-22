@@ -65,8 +65,7 @@ class TabBarIcon extends PureComponent {
   }
 }
 
-const mapStateToProps = ({ myMessages }) => ({
-
+const mapStateToProps = ({  }) => ({
 });
 
 export default connect(

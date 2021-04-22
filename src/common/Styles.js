@@ -79,10 +79,34 @@ const Styles = {
     shadowOpacity: 0.25,
     shadowRadius: 3.5,
     elevation: 5,
+  },
+
+  // box shadow block
+  blockShadow: {
+    shadowColor: Color.black,
+    shadowOffset: {
+      width: 0,
+      height: 10,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.5,
+    elevation: 5,
+  },
+
+  // favourite shadow block
+  favouriteShadow: {
+    shadowColor: Color.black,
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.34,
+    shadowRadius: 6.27,
+    elevation: 10,
   }
 };
 
-Styles.Common = {
+export const StylesCommon = {
   listContainer: {
     flex: 1,
   },

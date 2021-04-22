@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { View } from "react-native";
 
-import Home from '../containers/Home';
 import { Color } from '../common';
+import DetailPlaces from '../containers/DetailPlaces';
 import { FocusAwareStatusBar } from '../ultils/StatusBar';
 
-class HomeScreen extends Component {
+class DetailPlacesScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,16 +13,19 @@ class HomeScreen extends Component {
   }
 
   render() {
-    const { navigation } = this.props;
+    const { navigation, route } = this.props;
 
     return (
       <View style={{ flex: 1 }}>
         <FocusAwareStatusBar barStyle="light-content" backgroundColor={Color.primary} translucent={false} />
 
-        <Home navigation={navigation} />
+        <DetailPlaces
+          navigation={navigation}
+          route={route}
+        />
       </View>
     )
   }
 }
 
-export default HomeScreen;
+export default DetailPlacesScreen;

@@ -9,12 +9,20 @@ import { navigationRef } from './RootNavigation';
 import HomeScreen from './HomeScreen';
 import NotificationScreen from './NotificationScreen';
 import ProfileScreen from './UserScreen';
+import DetaiPlacesScreen from './DetaiPlacesScreen';
 
 import TabBarIcon from '../components/TabBarIcon';
 import { Color, Styles, Languages, Images } from '../common';
+import { StylesCommon } from '../common/Styles';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
+
+const defaultHeaderStyle = {
+  headerStyle: StylesCommon.toolbar(),
+  headerTintColor: Color.headerTintColor,
+  headerTitleStyle: StylesCommon.headerStyle,
+};
 
 const CustomTabBarBottom = ({ children, onPress }) => {
   return (
@@ -32,13 +40,30 @@ const CustomTabBarBottom = ({ children, onPress }) => {
           width: 70,
           height: 70,
           borderRadius: 35,
-          // backgroundColor: '#e32f45',
         }}
       >
         {children}
       </View>
     </TouchableOpacity>
   )
+}
+
+function HomeStack() {
+  return (
+    <Stack.Navigator
+      initialRouteName="HomeScreen"
+      headerMode="float"
+      screenOptions={{ ...defaultHeaderStyle, headerBackTitle: Languages.Back }}
+      gestureDirection="horizontal">
+      <Stack.Screen
+        name="HomeScreen"
+        component={HomeScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+    </Stack.Navigator>
+  );
 }
 
 function AppStack() {
@@ -61,8 +86,8 @@ function AppStack() {
       }}
     >
       <Tab.Screen
-        name="HomeScreen"
-        component={HomeScreen}
+        name="Home"
+        component={HomeStack}
         options={{
           tabBarIcon: ({ focused }) => (
             <TabBarIcon
@@ -72,7 +97,7 @@ function AppStack() {
               textIcon={Languages.Home}
               focused={focused}
             />
-          )
+          ),
         }}
       />
       <Tab.Screen
@@ -143,7 +168,6 @@ function AppStack() {
 
 class AppNavigator extends React.Component {
   render() {
-    console.log('asdasd')
     return (
       <NavigationContainer ref={navigationRef}>
         <Stack.Navigator>
@@ -153,6 +177,13 @@ class AppNavigator extends React.Component {
             options={{
               headerShown: false,
             }}
+          />
+          <Stack.Screen
+            name="DetaiPlacesScreen"
+            component={DetaiPlacesScreen}
+            options={() => ({
+              headerShown: false,
+            })}
           />
         </Stack.Navigator>
       </NavigationContainer>
