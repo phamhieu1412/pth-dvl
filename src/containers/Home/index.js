@@ -4,7 +4,9 @@ import {
   View,
   Text,
   TextInput,
+  TouchableOpacity,
 } from 'react-native';
+import LottieView from 'lottie-react-native';
 
 import { IconMI } from '../../Omni';
 import { Color, Styles } from '../../common';
@@ -35,15 +37,21 @@ const Home = ({ navigation }) => {
     <View style={{ flex: 1, backgroundColor: Color.white }}>
       {/* header */}
       <View style={styles.header}>
-        <IconMI name="sort" size={28} color={Color.white} />
-        <IconMI name="notifications-none" size={28} color={Color.white} />
+        <TouchableOpacity onPress={() => navigation.openDrawer()}>
+          <IconMI name="sort" size={28} color={Color.white} />
+        </TouchableOpacity>
+        <LottieView
+          source={require('../../images/lottieFiles/notification.json')}
+          autoPlay={true}
+          style={{ height: 50 }}
+        />
       </View>
 
       {/* Search */}
       <View
         style={{
           backgroundColor: Color.primary,
-          height: 120,
+          height: 100,
           paddingHorizontal: 20,
           zIndex: 2,
         }}>
@@ -61,7 +69,7 @@ const Home = ({ navigation }) => {
       </View>
 
       {/* Content body */}
-      <ScrollView showsVerticalScrollIndicator={false} style={{ marginBottom: 90, zIndex: 1 }}>
+      <ScrollView showsVerticalScrollIndicator={false} style={{ zIndex: 1 }}>
         <ListCategories />
         <View>
           <ListPlaces navigation={navigation} />

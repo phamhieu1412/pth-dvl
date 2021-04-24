@@ -10,10 +10,11 @@ const styles = StyleSheet.create({
   },
   header: {
     paddingTop: 40,
-    paddingBottom: 20,
+    paddingBottom: 10,
     paddingHorizontal: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
     backgroundColor: Color.primary,
   },
   headerTitle: {
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
     backgroundColor: Color.white,
     borderRadius: 10,
     position: 'absolute',
-    top: 90,
+    top: 70,
     flexDirection: 'row',
     paddingHorizontal: 20,
     alignItems: 'center',

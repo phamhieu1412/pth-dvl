@@ -16,7 +16,7 @@ const DetailPlaces = ({navigation, route}) => {
   return (
     <View style={{flex: 1, backgroundColor: Color.white}}>
       <StatusBar translucent backgroundColor="rgba(0,0,0,0)" />
-      <ImageBackground style={{flex: 0.7}} source={place.image}>
+      <ImageBackground style={{flex: 0.7}} source={place?.image}>
         <View style={styles.header}>
           {
             Back(navigation, Color.white, 'arrow-left', 30)
