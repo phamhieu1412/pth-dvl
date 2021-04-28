@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Image } from 'react-native';
 import {
   useTheme,
   Avatar,
@@ -16,17 +16,31 @@ import {
   DrawerItem
 } from '@react-navigation/drawer';
 import LottieView from 'lottie-react-native';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import { Images } from '../../common'
+import { Images, Languages, Color } from '../../common';
+import { Icon } from '../../Omni';
 import styles from './styles';
 
 const AuthContext = React.createContext();
 
 export function DrawerContent(props) {
-
+  const { navigation, state } = props;
+  const routes = [
+    {
+      screenName: 'HomeScreen',
+      label: Languages.Home,
+      iconActive: Images.homeIcon,
+      iconDeactive: Images._homeIcon,
+    },
+    {
+      screenName: 'ProfileScreen',
+      label: Languages.Account,
+      iconActive: Images.profileIcon,
+      iconDeactive: Images._profileIcon,
+    },
+  ];
+  const selectedRoute = state.routeNames[state.index];
   const paperTheme = useTheme();
-  console.log(props)
   // const { signOut, toggleTheme } = React.useContext(AuthContext);
   return (
     <View style={{ flex: 1 }}>
@@ -59,74 +73,26 @@ export function DrawerContent(props) {
           </View>
 
           <Drawer.Section style={styles.drawerSection}>
-            <DrawerItem
-              icon={({ color, size }) => (
-                <Icon
-                  name="home-outline"
-                  color={color}
-                  size={size}
-                />
-              )}
-              // icon={({ focused, color, size }) => {
-              // focused ? (
-              //   <LottieView
-              //     source={Images._homeIcon}
-              //     autoPlay={focused}
-              //     style={{ height: 25 }}
-              //   />
-              // ) : (
-              //   
-              // )
-              //   console.log('is', focused)
-              // }}
-              label="Home"
-              onPress={() => { props.navigation.navigate('HomeScreen') }}
-            />
-            <DrawerItem
-              icon={({ focused, color, size }) => console.log('isss', focused)}
-              icon={({ color, size }) => (
-                <Icon
-                  name="account-outline"
-                  color={color}
-                  size={size}
-                />
-              )}
-              label="Profile"
-              onPress={() => { props.navigation.navigate('ProfileScreen') }}
-            />
-            <DrawerItem
-              icon={({ color, size }) => (
-                <Icon
-                  name="bookmark-outline"
-                  color={color}
-                  size={size}
-                />
-              )}
-              label="Bookmarks"
-              onPress={() => { props.navigation.navigate('DetaiPlacesScreen') }}
-            />
-            <DrawerItem
-              icon={({ color, size }) => (
-                <Icon
-                  name="settings-outline"
-                  color={color}
-                  size={size}
-                />
-              )}
-              label="Settings"
-              onPress={() => { props.navigation.navigate('SettingsScreen') }}
-            />
-            <DrawerItem
-              icon={({ color, size }) => (
-                <Icon
-                  name="account-check-outline"
-                  color={color}
-                  size={size}
-                />
-              )}
-              label="Support"
-              onPress={() => { props.navigation.navigate('SupportScreen') }}
-            />
+            {routes.map((route, index) => (
+              <DrawerItem
+                key={index}
+                icon={() => route.screenName === selectedRoute ?
+                  <LottieView
+                    source={route.iconDeactive}
+                    autoPlay={true}
+                    style={{ height: 25 }}
+                  /> :
+                  <Image
+                    source={route.iconActive}
+                    style={{ width: 20, height: 20 }}
+                  />
+                }
+                label={() => <Text style={[{ fontSize: 16 }, route.screenName === selectedRoute && { color: Color.primary }]}>
+                  {route.label}
+                </Text>}
+                onPress={() => { navigation.navigate(route.screenName) }}
+              />
+            ))}
           </Drawer.Section>
           <Drawer.Section title="Preferences">
             <TouchableRipple
@@ -142,6 +108,7 @@ export function DrawerContent(props) {
           </Drawer.Section>
         </View>
       </DrawerContentScrollView>
+
       <Drawer.Section style={styles.bottomDrawerSection}>
         <DrawerItem
           icon={({ color, size }) => (

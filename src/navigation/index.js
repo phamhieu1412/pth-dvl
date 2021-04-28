@@ -14,7 +14,7 @@ import {
 import { navigationRef } from './RootNavigation';
 import HomeScreen from './HomeScreen';
 import NotificationScreen from './NotificationScreen';
-import ProfileScreen from './UserScreen';
+import ProfileScreen from './ProfileScreen';
 import DetaiPlacesScreen from './DetaiPlacesScreen';
 
 import { DrawerContent } from '../components/DrawerContent';

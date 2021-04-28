@@ -6,6 +6,7 @@ import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactInstanceManager;
 import com.RNFetchBlob.RNFetchBlobPackage;
+import com.reactnativecommunity.netinfo.NetInfoPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.dylanvann.fastimage.FastImageViewPackage;
 import com.masteratul.RNAppstoreVersionCheckerPackage;

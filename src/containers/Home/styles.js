@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { Styles, Color } from '../../common';
+import { Styles, Color, Device } from '../../common';
 
 const { width } = Styles;
 
@@ -9,8 +9,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   header: {
-    paddingTop: 40,
-    paddingBottom: 10,
+    paddingTop: Device.isIphoneX ? 40 : 15,
+    paddingBottom: Device.isIphoneX ? 10 : 5,
     paddingHorizontal: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',

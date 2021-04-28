@@ -7,4 +7,6 @@ export default Images = {
   _profileIcon: require('../images/bottomTabs/profile.json'),
   // plusIcon: require('../images/bottomTabs/plus.png'),
   _plusIcon: require('../images/bottomTabs/plus.json'),
+  introJson_1: require('../images/lottieFiles/theWorld.json'),
+  introJson_2: require('../images/lottieFiles/tool.json'),
 };

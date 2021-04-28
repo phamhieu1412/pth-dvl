@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import * as RootNavigation from './navigation/RootNavigation';
 import MyToast from './containers/MyToast';
 import AppNavigator from './navigation/index';
+import IntroScreen from './navigation/IntroScreen';
 import { Color, Styles, Languages } from './common';
 
 class Router extends React.PureComponent {
@@ -36,6 +37,7 @@ class Router extends React.PureComponent {
         <AppNavigator />
       </View>
     );
+    // return <IntroScreen />;
   }
 }
 

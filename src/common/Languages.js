@@ -24,9 +24,9 @@ export default new LocalizedStrings({
     Loading: 'LOADING...',
 
     // Sceen's Titles
-    Home: 'Trang chủ',
+    Home: 'Home',
     Intro: 'Intro',
-    Notifications: 'Thông báo',
+    Notifications: 'Notifications',
     Account: 'Account',
 
     NoMessage: `There's no messages`,
@@ -108,6 +108,7 @@ export default new LocalizedStrings({
     Confirm: 'Xác nhận',
     noConnection: 'KHÔNG CÓ KẾT NỐI INTERNET',
     Loading: 'Đang xử lý...',
+    Started: 'Bắt đầu',
 
     // Sceen's Titles
     Home: 'Trang chủ',
