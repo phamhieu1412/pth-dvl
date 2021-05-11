@@ -47,6 +47,7 @@
     "react-native-modal": "^11.1.0",
     "react-native-modal-filter-picker": "^2.0.0",
     "react-native-paper": "^3.6.0",
+    "react-native-parallax-scroll-view": "^0.21.3",
     "react-native-picker-select": "^7.0.0",
     "react-native-public-ip": "^1.0.1",
     "react-native-ratings": "^7.3.0",

@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 
 import { Styles, Color, Device } from '../../common';
 
@@ -8,6 +8,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  fixedSection: {
+    position: 'absolute',
+    width: width,
+    top: Platform.OS === 'ios' ? 30 : 45,
+  },
   header: {
     paddingTop: Device.isIphoneX ? 40 : 15,
     paddingBottom: Device.isIphoneX ? 10 : 5,
@@ -15,7 +20,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: Color.primary,
+    width: width,
   },
   headerTitle: {
     color: Color.white,
@@ -23,19 +28,17 @@ const styles = StyleSheet.create({
     fontSize: 23,
   },
   inputContainer: {
-    height: 60,
+    height: 50,
     width: '100%',
     backgroundColor: Color.white,
     borderRadius: 10,
-    position: 'absolute',
-    top: 70,
-    flexDirection: 'row',
     paddingHorizontal: 20,
+    flexDirection: 'row',
     alignItems: 'center',
     elevation: 12,
   },
   categoryContainer: {
-    marginTop: 60,
+    marginTop: 30,
     marginHorizontal: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -47,6 +50,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
+  },
+
+  sectionTitleText: {
+    color: 'white',
+    fontSize: 18,
+    paddingVertical: 5
   },
 });
 

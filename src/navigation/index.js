@@ -17,7 +17,7 @@ import NotificationScreen from './NotificationScreen';
 import ProfileScreen from './ProfileScreen';
 import DetaiPlacesScreen from './DetaiPlacesScreen';
 
-import { DrawerContent } from '../components/DrawerContent';
+import { DrawerContent } from '../components';
 import { Color, Styles, Languages, Images } from '../common';
 
 const Drawer = createDrawerNavigator();

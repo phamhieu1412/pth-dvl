@@ -30,18 +30,23 @@ class Router extends React.PureComponent {
   };
 
   render() {
+    const { statusIntro } = this.props;
 
-    return (
-      <View style={[Styles.app, { backgroundColor: Color.background }]}>
-        <MyToast />
-        <AppNavigator />
-      </View>
-    );
-    // return <IntroScreen />;
+    if (statusIntro && statusIntro === true) {
+      return (
+        <View style={[Styles.app, { backgroundColor: Color.background }]}>
+          <MyToast />
+          <AppNavigator />
+        </View>
+      );
+    }
+
+    return <IntroScreen />;
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = ({ auth }) => ({
+  statusIntro: auth.statusIntro,
 });
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {

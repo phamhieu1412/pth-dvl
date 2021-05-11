@@ -23,7 +23,7 @@ import styles from './styles';
 
 const AuthContext = React.createContext();
 
-export function DrawerContent(props) {
+function DrawerContent(props) {
   const { navigation, state } = props;
   const routes = [
     {
@@ -125,3 +125,5 @@ export function DrawerContent(props) {
     </View>
   );
 }
+
+export default DrawerContent;

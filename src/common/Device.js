@@ -8,5 +8,5 @@ const isIphoneX =
 export default {
   isIphoneX,
   ToolbarHeight: Platform.OS === 'ios' ? (isIphoneX ? 35 : 0) : 0,
-  HeaderHeight: Platform.OS === 'ios' ? (isIphoneX ? 44 : 44) : 56,
+  HeaderHeight: Platform.OS === 'ios' ? (isIphoneX ? 80 : 60) : 80,
 };

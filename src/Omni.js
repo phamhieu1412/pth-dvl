@@ -16,7 +16,7 @@ import { Constants } from './common';
 
 export const Icon = _Icon;
 export const IconIO = _IconIO;
-export const UboIcon = _IconAntd;
+export const IconAntd = _IconAntd;
 export const IconMI = _IconMI;
 export const IconSLI = _IconSLI;
 export const IconFA = _IconFA;

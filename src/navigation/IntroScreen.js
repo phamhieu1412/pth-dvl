@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { connect } from 'react-redux';
 import LottieView from 'lottie-react-native';
 
+import { actions as authAction } from '../redux/AuthRedux';
 import { Color, Images, Languages } from '../common';
 import { setBarStyle, setTranslucent, setBackgroundColor } from '../ultils/StatusBar';
 
@@ -19,6 +21,7 @@ class IntroScreen extends Component {
   }
 
   render() {
+    const { finishIntro } = this.props;
     return (
       <View style={styles.container}>
         {/* Lottie view */}
@@ -52,7 +55,8 @@ class IntroScreen extends Component {
         {/* Button started */}
         <TouchableOpacity
           activeOpacity={0.8}
-          style={styles.buttonStart}>
+          style={styles.buttonStart}
+          onPress={() => finishIntro()}>
           <Text style={styles.textButtonStart}>
             {Languages.Started}
           </Text>
@@ -62,7 +66,11 @@ class IntroScreen extends Component {
   }
 }
 
-export default IntroScreen;
+const mapDispatchToProps = (dispatch) => ({
+  finishIntro: () => dispatch(authAction.finishIntro()),
+});
+
+export default connect(null, mapDispatchToProps)(IntroScreen);
 
 const styles = StyleSheet.create({
   container: {
